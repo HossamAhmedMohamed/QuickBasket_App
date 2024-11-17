@@ -13,7 +13,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    // استدعاء الدالة في initState
+    
     ConnectivityController.instance.init();
   }
 
