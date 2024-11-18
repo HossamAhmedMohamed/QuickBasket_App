@@ -1,6 +1,7 @@
 import 'package:commerce_app/core/app/connectivity.dart';
 import 'package:commerce_app/core/presentation/screens/no_network_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -23,17 +24,21 @@ class _MyAppState extends State<MyApp> {
       valueListenable: ConnectivityController.instance.isConnected,
       builder: (_, value, __) {
         if (value) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Shopping App',
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              useMaterial3: true,
-            ),
-            home: const Scaffold(
-              backgroundColor: Colors.red,
-              body: Center(
-                child: Text("hhhhhhhhhhhhhhhhh"),
+          return ScreenUtilInit(
+            designSize: const Size(375, 812),
+            minTextAdapt: true,
+            child: MaterialApp(
+              debugShowCheckedModeBanner: false,
+              title: 'Shopping App',
+              theme: ThemeData(
+                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                useMaterial3: true,
+              ),
+              home: const Scaffold(
+                backgroundColor: Colors.red,
+                body: Center(
+                  child: Text("hhhhhhhhhhhhhhhhh"),
+                ),
               ),
             ),
           );
