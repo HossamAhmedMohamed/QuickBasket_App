@@ -1,4 +1,7 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:commerce_app/core/app/connectivity.dart';
+import 'package:commerce_app/core/languages/app_localization_setup.dart';
 import 'package:commerce_app/core/presentation/screens/no_network_screen.dart';
 import 'package:commerce_app/core/routes/app_router.dart';
 import 'package:commerce_app/core/theme/app_theme.dart';
@@ -16,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    
+
     ConnectivityController.instance.init();
   }
 
@@ -31,8 +34,22 @@ class _MyAppState extends State<MyApp> {
             minTextAdapt: true,
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Shopping App',
+              title: 'Amazon Store',
               theme: themeDark(),
+              locale: const Locale('ar'),
+              supportedLocales: AppLocalizationsSetup.supportedLocales,
+              localizationsDelegates:
+                  AppLocalizationsSetup.localizationsDelegates,
+              localeResolutionCallback:
+                  AppLocalizationsSetup.localeResolutionCallback,
+
+              builder: (context, widget) {
+                return GestureDetector(
+                  onTap: () {
+                    FocusManager.instance.primaryFocus?.unfocus();
+                  },
+                );
+              },
               // ThemeData(
               //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               //   useMaterial3: true,

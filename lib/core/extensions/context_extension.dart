@@ -1,3 +1,4 @@
+import 'package:commerce_app/core/languages/app_localization.dart';
 import 'package:commerce_app/core/theme/colors_extension.dart';
 import 'package:commerce_app/core/theme/image_extension.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,10 @@ extension ContextExt on BuildContext {
   MyColors get color => Theme.of(this).extension<MyColors>()!;
 
   MyImages get assets => Theme.of(this).extension<MyImages>()!;
+
+  String translate(String langkey) {
+    return AppLocalizations.of(this)!.translate(langkey).toString();
+  }
 
   Future<dynamic> pushName(String routeName, {Object? arguments}) {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
