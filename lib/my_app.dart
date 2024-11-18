@@ -1,5 +1,6 @@
 import 'package:commerce_app/core/app/connectivity.dart';
 import 'package:commerce_app/core/presentation/screens/no_network_screen.dart';
+import 'package:commerce_app/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -34,10 +35,12 @@ class _MyAppState extends State<MyApp> {
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
               ),
+              onGenerateRoute: AppRouter.onGenerateRoute,
+              // initialRoute: ,
               home: const Scaffold(
                 backgroundColor: Colors.red,
                 body: Center(
-                  child: Text("hhhhhhhhhhhhhhhhh"),
+                  child: Text('hhhhhhhhhhhhhhhhh'),
                 ),
               ),
             ),

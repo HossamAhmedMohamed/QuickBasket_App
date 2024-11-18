@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:commerce_app/core/app/env.variables.dart';
 import 'package:commerce_app/my_app.dart';
 import 'package:firebase_core/firebase_core.dart';
