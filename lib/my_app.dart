@@ -1,6 +1,7 @@
 import 'package:commerce_app/core/app/connectivity.dart';
 import 'package:commerce_app/core/presentation/screens/no_network_screen.dart';
-import 'package:commerce_app/routes/app_router.dart';
+import 'package:commerce_app/core/routes/app_router.dart';
+import 'package:commerce_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,10 +32,11 @@ class _MyAppState extends State<MyApp> {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Shopping App',
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-                useMaterial3: true,
-              ),
+              theme: themeDark(),
+              // ThemeData(
+              //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              //   useMaterial3: true,
+              // ),
               onGenerateRoute: AppRouter.onGenerateRoute,
               // initialRoute: ,
               home: const Scaffold(

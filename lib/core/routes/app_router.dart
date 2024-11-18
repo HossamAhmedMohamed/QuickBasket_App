@@ -1,5 +1,5 @@
 import 'package:commerce_app/core/presentation/screens/page_under_screen.dart';
-import 'package:commerce_app/routes/base_routes.dart';
+import 'package:commerce_app/core/routes/base_routes.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
