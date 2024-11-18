@@ -18,4 +18,3 @@ class Assets {
   /// assets/images/core/splash.jpg
   static const String imagesCoreSplash = "assets/images/core/splash.jpg";
 }
-
