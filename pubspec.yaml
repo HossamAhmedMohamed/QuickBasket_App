@@ -71,7 +71,7 @@ flutter:
   assets:
     - .env.dev
     - .env.prod
-    - assets/images/core/
+    - assets/images/
     - lang/ar.json
     - lang/en.json
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -107,7 +107,7 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 
 flutter_assets:
-  assets_path: assets/images/core
+  assets_path: assets/images/
   output_path: lib/utils
   filename: app_images.dart
   field_prefix: null
