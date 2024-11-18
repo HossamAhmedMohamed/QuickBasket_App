@@ -1,40 +1,46 @@
+import 'package:commerce_app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
-class MyImages extends ThemeExtension<MyImages> {
-  const MyImages({
-    required this.testImage,
+class MyAssets extends ThemeExtension<MyAssets> {
+  const MyAssets({
+    required this.bigNavBar,
+    required this.homeBg,
   });
 
-  final String? testImage;
+  final String? bigNavBar;
+  final String? homeBg;
 
   @override
-  ThemeExtension<MyImages> copyWith({
-    String? testImage,
+  ThemeExtension<MyAssets> copyWith({
+    String? bigNavBar,
+    String? homeBg,
   }) {
-    return MyImages(
-      testImage: testImage,
+    return MyAssets(
+      bigNavBar: bigNavBar,
+      homeBg: homeBg,
     );
   }
 
   @override
-  ThemeExtension<MyImages> lerp(
-    covariant ThemeExtension<MyImages>? other,
+  ThemeExtension<MyAssets> lerp(
+    covariant ThemeExtension<MyAssets>? other,
     double t,
   ) {
-    if (other is! MyImages) {
+    if (other is! MyAssets) {
       return this;
     }
-
-    return MyImages(
-      testImage: testImage,
+    return MyAssets(
+      bigNavBar: bigNavBar,
+      homeBg: homeBg,
     );
   }
 
-  // static const MyImages dark = MyImages(
-  //   testImage: Assets.imagesCoreSplash,
-  // );
-
-  // static const MyImages light = MyImages(
-  //   testImage: Assets.imagesCoreEmptyScreen,
-  // );
+  static const MyAssets dark = MyAssets(
+    bigNavBar: Assets.imagesCustomerBigNavBarDark,
+    homeBg: Assets.imagesCustomerHomeBgDark,
+  );
+  static const MyAssets light = MyAssets(
+    bigNavBar: Assets.imagesCustomerBigNavBarLight,
+    homeBg: Assets.imagesCustomerHomeBgLight,
+  );
 }

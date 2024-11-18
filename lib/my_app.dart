@@ -4,6 +4,7 @@ import 'package:commerce_app/core/app/connectivity.dart';
 import 'package:commerce_app/core/languages/app_localization_setup.dart';
 import 'package:commerce_app/core/presentation/screens/no_network_screen.dart';
 import 'package:commerce_app/core/routes/app_router.dart';
+import 'package:commerce_app/core/routes/routes.dart';
 import 'package:commerce_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,25 +44,18 @@ class _MyAppState extends State<MyApp> {
               localeResolutionCallback:
                   AppLocalizationsSetup.localeResolutionCallback,
 
-              builder: (context, widget) {
-                return GestureDetector(
-                  onTap: () {
-                    FocusManager.instance.primaryFocus?.unfocus();
-                  },
-                );
-              },
-              // ThemeData(
-              //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              //   useMaterial3: true,
-              // ),
+              // builder: (context, widget) {
+              //   return GestureDetector(
+              //     onTap: () {
+              //       FocusManager.instance.primaryFocus?.unfocus();
+              //     },
+              //   );
+              // },
+             
               onGenerateRoute: AppRouter.onGenerateRoute,
-              // initialRoute: ,
-              home: const Scaffold(
-                backgroundColor: Colors.red,
-                body: Center(
-                  child: Text('hhhhhhhhhhhhhhhhh'),
-                ),
-              ),
+               initialRoute: login ,
+              // home: const LoginScreen(),
+               
             ),
           );
         } else {

@@ -28,29 +28,24 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  cupertino_icons: ^1.0.8
+  animate_do: ^3.3.4
   connectivity_plus: ^5.0.2
-  flutter_dotenv: ^5.2.1
-  flutter_screenutil: ^5.9.3
+  cupertino_icons: ^1.0.8
   firebase_core: ^3.6.0
-  flutter_native_splash: ^2.4.3
-  flutter_localizations:
-    sdk: flutter
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.2.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_native_splash: ^2.4.3
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^4.0.0
-  very_good_analysis: ^6.0.0
   flutter_launcher_icons: ^0.14.1
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
+  very_good_analysis: ^6.0.0
 
 flutter_icons:
   android: true
@@ -71,7 +66,7 @@ flutter:
   assets:
     - .env.dev
     - .env.prod
-    - assets/images/core/
+    - assets/images/
     - lang/ar.json
     - lang/en.json
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -102,12 +97,10 @@ flutter:
           weight: 500
         - asset: assets/fonts/english/poppins/Poppins-Regular.ttf
           weight: 400
-  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-
 flutter_assets:
-  assets_path: assets/images/core
+  assets_path: assets/images/
   output_path: lib/utils
   filename: app_images.dart
   field_prefix: null

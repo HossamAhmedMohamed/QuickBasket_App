@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 extension ContextExt on BuildContext {
   MyColors get color => Theme.of(this).extension<MyColors>()!;
 
-  MyImages get assets => Theme.of(this).extension<MyImages>()!;
+  MyAssets get assets => Theme.of(this).extension<MyAssets>()!;
+
+  TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
 
   String translate(String langkey) {
     return AppLocalizations.of(this)!.translate(langkey).toString();
